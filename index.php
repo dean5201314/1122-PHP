@@ -8,18 +8,56 @@
 </head>
 
 <body>
-    <form action="">
+    <h2>GET</h2>
+    <form action="?" method="get">
         <div>
-            <label for="acc"></label>
+            <label for="acc">帳號</label>
             <input type="text" name="acc" id="acc">
         </div>
         <div>
-            <label for="pw"></label>
+            <label for="pw">密碼</label>
             <input type="password" name="pw" id="pw">
         </div>
         <div>
-            <label for="submit"></label>
-            <input type="submit" name="acc" id="acc">
+            <input type="submit" value="送出">
+            <input type="reset" value="重置">
+        </div>
+
+    </form>
+    <br><hr><br>
+    <h2>POST</h2>
+    <form action="?" method="post">
+        <div>
+            <label for="acc">帳號</label>
+            <input type="text" name="acc" id="acc">
+        </div>
+        <div>
+            <label for="pw">密碼</label>
+            <input type="password" name="pw" id="pw">
+        </div>
+        <div>
+            <input type="submit" value="送出">
+            <input type="reset" value="重置">
+        </div>
+
+        <br><hr><br>
+    <h2>檔案上傳</h2>
+    <form action="?" method="post" enctype="multipart/form-data">
+        <div>
+            <label for="acc">帳號</label>
+            <input type="text" name="acc" id="acc">
+        </div>
+        <div>
+            <label for="pw">密碼</label>
+            <input type="password" name="pw" id="pw">
+        </div>
+        <div>
+            <label for="img">檔案</label>
+            <input type="file" name="img" id="img">
+        </div>
+        <div>
+            <input type="submit" value="送出">
+            <input type="reset" value="重置">
         </div>
 
     </form>
