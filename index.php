@@ -39,7 +39,7 @@
             <input type="submit" value="送出">
             <input type="reset" value="重置">
         </div>
-
+        </form>
         <br><hr><br>
     <h2>檔案上傳</h2>
     <form action="?" method="post" enctype="multipart/form-data">
