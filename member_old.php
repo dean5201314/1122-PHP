@@ -16,6 +16,5 @@ if($_GET['login']==1){
 }
 
 ?>
-
 </body>
 </html>
