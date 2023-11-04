@@ -1,13 +1,14 @@
 <?php
-date_default_timezone_set("Asia/Taipei");
+include_once "session.php";
+
 if($_POST['acc']=='admin' && $_POST['pw']=='1234'){
 
-    setcookie("login","mackliu",time()+60);
+    $_SESSION['login']=$_POST['acc'];
 
     header("location:member.php");
 
 }else{
-    setcookie("error","帳號或密碼錯誤,請重新登入",time()+5);
+    $_SESSION['error']="帳號或密碼錯誤,請重新登入";
     header("location:login.php");
 }
 ?>

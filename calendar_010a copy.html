@@ -1,0 +1,240 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>萬年曆 </title>
+    <link rel="stylesheet" href="../home.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: fantasy;
+            overflow: hidden;
+
+
+
+        }
+
+        /*設定body區*/
+
+
+        .main {
+
+            display: flex;
+            width: 996px;
+            border: 1px solid black;
+            padding: 10 10px;
+            margin: 0 auto;
+            text-align: center;
+            flex-wrap: wrap;
+
+
+
+
+        }
+
+        /*border*/
+        body>*:not(aside, section),
+        aside>*,
+        section>* {
+            border: 1px solid lightslategray;
+
+        }
+
+        .Top {
+            width: 1000px;
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            color: black;
+            text-align: center;
+
+
+
+        }
+
+        .aside {
+            flex-basis: 40%;
+            float: left;
+            background-image: url(01.png);
+            background-position: center;
+            background-size: cover;
+
+
+
+        }
+
+        .section {
+
+            flex: 60%;
+            display: flex;
+            float: right;
+            flex-direction: column;
+
+
+        }
+
+
+        footer {
+            width: 100%;
+            padding: 5px;
+            color: #000000;
+            font-size: 20px;
+            border: 1px solid black;
+            text-align: center;
+
+
+        }
+
+
+        table {
+
+            border-radius: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .header {
+            background-color: lightblue;
+        }
+
+        tr,
+        td {
+            width: 80px;
+            height: 80px;
+            border: 1px solid black;
+            background-color: white;
+        }
+
+        td:hover {
+            border: 1px solid red;
+            color: red;
+            border-radius: 50px;
+        }
+
+        .weekend {
+            background-color: lightcoral;
+        }
+
+        .workday {
+            background: white;
+        }
+
+        .today {
+            background: lightblue;
+
+        }
+
+        .wrapper {
+            /* margin: auto; */
+
+            font-size: 18px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            align-items: center;
+
+        }
+
+
+        button {
+            border: none;
+            border-radius: 50%;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            background-color: lightslategrey;
+            color: white;
+            font-size: 20px;
+        }
+        button>a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+<script src="chrome-extension://jhffgcfmcckgmioipfnmbannkpncfipo/util.js"></script><script src="chrome-extension://jhffgcfmcckgmioipfnmbannkpncfipo/pagejs.js"></script><style type="text/css">#_copy{align-items:center;background:#4494d5;border-radius:3px;color:#fff;cursor:pointer;display:flex;font-size:13px;height:30px;justify-content:center;position:absolute;width:60px;z-index:1000}#select-tooltip,#sfModal,.modal-backdrop,div[id^=reader-helper]{display:none!important}.modal-open{overflow:auto!important}._sf_adjust_body{padding-right:0!important}.super_copy_btns_div{position:fixed;width:154px;left:10px;top:45%;background:#e7f1ff;border:2px solid #4595d5;font-weight:600;border-radius:2px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;z-index:5000}.super_copy_btns_logo{width:100%;background:#4595d5;text-align:center;font-size:12px;color:#e7f1ff;line-height:30px;height:30px}.super_copy_btns_btn{display:block;width:128px;height:28px;background:#7f5711;border-radius:4px;color:#fff;font-size:12px;border:0;outline:0;margin:8px auto;font-weight:700;cursor:pointer;opacity:.9}.super_copy_btns_btn:hover{opacity:.8}.super_copy_btns_btn:active{opacity:1}</style></head>
+
+<body class="main" data-new-gr-c-s-check-loaded="14.1136.0" data-gr-ext-installed="" _c_t_j1="1">
+<a id="home" href="../index.html">回目錄</a>
+
+    <header class="Top">
+        Perpetual Calendar
+    </header>
+
+    <aside class="aside">
+
+    </aside>
+
+    <section class="section">
+
+        <!-- 放php -->
+
+
+
+        <div class="wrapper">
+
+            <h1 class="header"></h1>
+            <!-- 取得月份的參數 -->
+
+            
+            <!-- 控制切換月份的按鈕 -->
+            <div class="nav">
+
+                <button><a href="index.php?year=2023&amp;month=10">PREV MONTH</a>
+                </button>
+                <button><a href="index.php?year=2022&amp;month=11">PREV YEAR</a>
+                </button>
+                <span style="font-size:30px">2023年11月</span>
+                
+                    <button>
+                        <a href="index.php?year=2024&amp;month=11">NEXT YEAR</a>
+                    </button>
+
+                    <button>
+                    <a href="index.php?year=2023&amp;month=12">NEXT MONTH</a>
+                </button>
+
+            </div>
+
+            <!-- 萬年曆內容 -->
+
+
+            
+
+            <table>
+                <tbody><tr>
+                    <td class="header">日</td>
+                    <td class="header">一</td>
+                    <td class="header">二</td>
+                    <td class="header">三</td>
+                    <td class="header">四</td>
+                    <td class="header">五</td>
+                    <td class="header">六</td>
+                </tr>
+
+                <tr><td></td><td></td><td></td><td class="workday ">01</td><td class="workday ">02</td><td class="workday ">03</td><td class="weekend today">04</td></tr><tr><td class="weekend ">05</td><td class="workday ">06</td><td class="workday ">07</td><td class="workday ">08</td><td class="workday ">09</td><td class="workday ">10</td><td class="weekend ">11</td></tr><tr><td class="weekend ">12</td><td class="workday ">13</td><td class="workday ">14</td><td class="workday ">15</td><td class="workday ">16</td><td class="workday ">17</td><td class="weekend ">18</td></tr><tr><td class="weekend ">19</td><td class="workday ">20</td><td class="workday ">21</td><td class="workday ">22</td><td class="workday ">23</td><td class="workday ">24</td><td class="weekend ">25</td></tr><tr><td class="weekend ">26</td><td class="workday ">27</td><td class="workday ">28</td><td class="workday ">29</td><td class="workday ">30</td><td></td><td></td>
+
+            </tr></tbody></table>
+                
+
+        </div>
+
+        
+
+
+    </section>
+
+
+
+
+    <footer>
+    現在時間:   2023 年 11 月 04 日 09 點 24 分 20 秒<br>距離結訓日09-15 倒數<span style="color:red">316</span>天    </footer>
+
+
+
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
